@@ -1,11 +1,15 @@
+@regression
 Feature: Login on the website
 
-  Scenario Outline: testing the login module
+  Background:
     Given the user is on the serenity demo page
+
+    @successlogin
+  Scenario Outline: testing the login module successfully
     When attempts to log in
       | user  | pass     |
-      | admin | serenity |
+      | <user> | <pass> |
     Then will validate the text on screen <message>
     Examples:
-      | message   |
-      | Dashboard |
+      | user | pass     | message   |
+      | admin| serenity | Dashboard |
