@@ -1,5 +1,4 @@
-package com.co.demo.runners;
-
+package com.co.demo.runner;
 import io.cucumber.junit.CucumberOptions;
 import io.cucumber.junit.CucumberSerenityRunner;
 import org.junit.runner.RunWith;
@@ -12,5 +11,6 @@ import org.junit.runner.RunWith;
         plugin = {"pretty", "json:target/cucumber-reports/cucumber.json"},
         snippets = CucumberOptions.SnippetType.CAMELCASE
 )
+
 public class SerenityLoginRunner {
 }
